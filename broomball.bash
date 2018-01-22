@@ -1,7 +1,7 @@
 #!/bin/bash
 
-#set -euo pipefail
-#IFS=$'\n\t'
+set -euo pipefail
+IFS=$'\n\t'
 
 
 
@@ -11,6 +11,7 @@ echo "placeholder"
 }
 
 
+set +u
 while [ "$1" != "" ]; do
     case $1 in
         -d | --directory )      shift
@@ -44,3 +45,4 @@ while [ "$1" != "" ]; do
     esac
     shift
 done
+set -u
